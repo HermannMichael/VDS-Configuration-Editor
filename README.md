@@ -26,5 +26,6 @@ Best practice creating custom configuration file sets: comparing 2018.1 and 2018
 Last but not least, the solution's disclaimer applies to any code and template, even if not added explicitly as a header.
 
 Respectfully,
+
 Markus Koechl
 Solutions Engineer PDM|PLM - Autodesk Central Europe
