@@ -1,0 +1,52 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9a32786d-0115-490f-b53e-8c943fd73644</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyApplication</RootNamespace>
+    <AssemblyName>MyApplication</AssemblyName>
+    <Name>SD124422-Sample-01</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Tools\Adsk.CreatePwFile.ps1" />
+    <Compile Include="Tools\ADSK.Vault.powerShell.Tools.psm1" />
+    <Compile Include="Templates\MyScriptTemplate.ps1" />
+    <Compile Include="Templates\My-VaultConnectExecute-ScriptTemplate.ps1" />
+    <Compile Include="Tools\Adsk.VaultActivateScheduledJobForQueue.ps1" />
+    <Compile Include="Tools\Adsk.VaultAddJobToQueue.ps1" />
+    <Compile Include="Vault-API-2019-ConnectAndExecute.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools\" />
+    <Folder Include="Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autodesk.Connectivity.WebServices, Version=24.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1">
+      <Name>Autodesk.Connectivity.WebServices</Name>
+      <AssemblyName>Autodesk.Connectivity.WebServices.dll</AssemblyName>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2019 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="Build" />
+  <Import Project="$(MSBuildExtensionsPath)\PowerShell Tools for Visual Studio\PowerShellTools.targets" Condition="Exists('$(MSBuildExtensionsPath)\PowerShell Tools for Visual Studio\PowerShellTools.targets')" />
+</Project>
