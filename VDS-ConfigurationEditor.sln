@@ -13,7 +13,7 @@ Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "VDS_SnippetsAndTemplates", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2019-ConfigLinks", "VDS-2019-ConfigLinks\VDS-2019-ConfigLinks.csproj", "{79A68AF2-B4FE-4CDD-8C15-383E7A185C52}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4A0592A-F834-4152-8E3E-77031E02F8E0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README ETC.", "README ETC.", "{F4A0592A-F834-4152-8E3E-77031E02F8E0}"
 	ProjectSection(SolutionItems) = preProject
 		Disclaimer.txt = Disclaimer.txt
 		README.md = README.md

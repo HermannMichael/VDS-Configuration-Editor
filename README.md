@@ -27,4 +27,4 @@ Last but not least, the solution's disclaimer applies to any code and template, 
 
 Respectfully,
 
-Markus Koechl,	Solutions Engineer PDM|PLM - Autodesk Central Europe
+Markus Koechl, 	Solutions Engineer PDM|PLM - Autodesk Central Europe
