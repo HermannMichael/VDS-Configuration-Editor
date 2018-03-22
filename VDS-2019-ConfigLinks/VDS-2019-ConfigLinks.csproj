@@ -91,6 +91,24 @@
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\Inventor.cfg">
       <Link>2019-Quickstart\CAD.Custom\Configuration\Inventor.cfg</Link>
     </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\addins\breadCrumb.ps1">
+      <Link>2019-Quickstart\CAD\addins\breadCrumb.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\addins\Default.ps1">
+      <Link>2019-Quickstart\CAD\addins\Default.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\addins\FileNameValidation.ps1">
+      <Link>2019-Quickstart\CAD\addins\FileNameValidation.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD-Vanilla.cfg">
+      <Link>2019-Quickstart\CAD\Configuration\AutoCAD-Vanilla.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD.cfg">
+      <Link>2019-Quickstart\CAD\Configuration\AutoCAD.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\Inventor.cfg">
+      <Link>2019-Quickstart\CAD\Configuration\Inventor.cfg</Link>
+    </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\debug.log">
       <Link>2019-Quickstart\HelpFiles\debug.log</Link>
     </None>
@@ -210,6 +228,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD-Vanilla.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\AutoCAD-Vanilla.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\AutoCAD.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\CableAndHarness.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\CableAndHarness.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\DesignAccelerator.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\DesignAccelerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\FrameGenerator.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\FrameGenerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\Inventor.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\Inventor.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\SaveCopyAs.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\SaveCopyAs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\TubeAndPipe.xaml">
+      <Link>2019-Quickstart\CAD\Configuration\TubeAndPipe.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.CustomObject.xaml">
       <Link>2019-Quickstart\Vault.Custom\Configuration\ADSK.QS.CustomObject.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -235,63 +293,48 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Aufgabe\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Aufgabe\Datasheet.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Aufgabe\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\Aufgabe\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Eco\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Eco\Datasheet.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\ADSK.QS.CAD BOM.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\File\ADSK.QS.CAD BOM.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\CAD BOM.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\File\CAD BOM.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\ADSK.QS.FileDataSheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\File\ADSK.QS.FileDataSheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\File\Datasheet.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Folder\ADSK.QS.FolderDataSheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\Folder\ADSK.QS.FolderDataSheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Folder\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Folder\Datasheet.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Organisation\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\Organisation\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Associated Files.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Associated Files.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Person\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\Person\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Datasheet.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Sendung\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\Sendung\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Organisation\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Organisation\Datasheet.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Task\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\Task\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Person\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Person\Datasheet.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Sendung\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Sendung\Datasheet.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Task\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Task\Datasheet.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Transmittal\Datasheet.xaml">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Transmittal\Datasheet.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Transmittal\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>2019-Quickstart\Vault.Custom\Configuration\Transmittal\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -1152,60 +1195,6 @@
     </Resource>
     <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ConfigurationVersionHistory.xml">
       <Link>2019-Quickstart\Vault.Custom\ConfigurationVersionHistory.xml</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\attachment.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\attachment.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\docx.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\docx.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\dwg.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\dwg.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\iam.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\iam.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\idw.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\idw.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\ipn.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\ipn.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\ipt.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\ipt.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\linkedfile.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\linkedfile.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\mdb.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\mdb.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\pdf.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\pdf.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\pptx.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\pptx.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\Primary.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\Primary.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\PrimarySub.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\PrimarySub.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\Secondary.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\Secondary.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\SecondarySub.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\SecondarySub.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\StandardComponent.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\StandardComponent.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\unknown.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\unknown.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\Icons\xlsx.png">
-      <Link>2019-Quickstart\Vault.Custom\Configuration\Item\Icons\xlsx.png</Link>
     </Resource>
     <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\VaultDynamicProperties.xml">
       <Link>2019-Quickstart\Vault.Custom\Configuration\VaultDynamicProperties.xml</Link>
