@@ -1,0 +1,1478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43FE4BDE-2C3D-42AA-9AE8-2027FA7D411A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VDS_2019_ConfigLinks_Quickstart</RootNamespace>
+    <AssemblyName>VDS-2019-Template</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autodesk.Connectivity.WebServices">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2019 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Common">
+      <HintPath>..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CreateObject">
+      <HintPath>..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CreateObject.dll</HintPath>
+    </Reference>
+    <Reference Include="dataStandard.UI, Version=24.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\VDS-2019-ConfigLinks\dataStandard.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\addins\ADSK.QS.breadCrumb.ps1">
+      <Link>CAD.Custom\addins\ADSK.QS.breadCrumb.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\addins\ADSK.QS.Default.ps1">
+      <Link>CAD.Custom\addins\ADSK.QS.Default.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCAD.cfg">
+      <Link>CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCAD.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCAD.cfg">
+      <Link>CAD.Custom\Configuration\AutoCAD.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\Inventor.cfg">
+      <Link>CAD.Custom\Configuration\Inventor.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\addins\breadCrumb.ps1">
+      <Link>CAD\addins\breadCrumb.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\addins\Default.ps1">
+      <Link>CAD\addins\Default.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\addins\FileNameValidation.ps1">
+      <Link>CAD\addins\FileNameValidation.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD-Vanilla.cfg">
+      <Link>CAD\Configuration\AutoCAD-Vanilla.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD.cfg">
+      <Link>CAD\Configuration\AutoCAD.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\Inventor.cfg">
+      <Link>CAD\Configuration\Inventor.cfg</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\debug.log">
+      <Link>HelpFiles\debug.log</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.Default.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.QS.Default.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.FileBOM.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.QS.FileBOM.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.CreateCustomObject.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.CreateCustomObject.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.CreateFile.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.CreateFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.CreateFolder.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.CreateFolder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.EditCustomObject.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.EditCustomObject.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.EditFile.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.EditFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.EditFolder.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.EditFolder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\QuickstartExtension.ps1">
+      <Link>Vault.Custom\addinVault\QuickstartExtension.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\AssociatedFiles.ps1">
+      <Link>Vault\addinVault\AssociatedFiles.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Default.ps1">
+      <Link>Vault\addinVault\Default.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\FileBOM.ps1">
+      <Link>Vault\addinVault\FileBOM.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\CreateCustomObject.ps1">
+      <Link>Vault\addinVault\Menus\CreateCustomObject.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\CreateFile.ps1">
+      <Link>Vault\addinVault\Menus\CreateFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\CreateFolder.ps1">
+      <Link>Vault\addinVault\Menus\CreateFolder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\EditCustomObject.ps1">
+      <Link>Vault\addinVault\Menus\EditCustomObject.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\EditFile.ps1">
+      <Link>Vault\addinVault\Menus\EditFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\EditFolder.ps1">
+      <Link>Vault\addinVault\Menus\EditFolder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\sample1.ps1">
+      <Link>Vault\addinVault\Menus\sample1.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\Select Folder.ps1">
+      <Link>Vault\addinVault\Menus\Select Folder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\ShowAboutDialog.ps1">
+      <Link>Vault\addinVault\Menus\ShowAboutDialog.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\ShowLog.ps1">
+      <Link>Vault\addinVault\Menus\ShowLog.ps1</Link>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCadDynamicProperties.xml">
+      <Link>CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCadDynamicProperties.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCadDynamicProperties.xml">
+      <Link>CAD.Custom\Configuration\AutoCadDynamicProperties.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\InventorDynamicProperties.xml">
+      <Link>CAD.Custom\Configuration\InventorDynamicProperties.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\de-DE\PropertyTranslations.xml">
+      <Link>de-DE\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\de-DE\UIStrings.xml">
+      <Link>de-DE\UIStrings.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\en-US\PropertyTranslations.xml">
+      <Link>en-US\PropertyTranslations.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\en-US\UIStrings.xml">
+      <Link>en-US\UIStrings.xml</Link>
+    </Resource>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.1GeneralInformation.html">
+      <Link>HelpFiles\C.1GeneralInformation.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.10Legacydata.html">
+      <Link>HelpFiles\C.2.10Legacydata.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.11FrameGenerator.html">
+      <Link>HelpFiles\C.2.11FrameGenerator.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.12TubeandPipe.html">
+      <Link>HelpFiles\C.2.12TubeandPipe.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.13DesignAccelerator.html">
+      <Link>HelpFiles\C.2.13DesignAccelerator.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.14CableandHarness.html">
+      <Link>HelpFiles\C.2.14CableandHarness.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.15Navigation.html">
+      <Link>HelpFiles\C.2.15Navigation.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.1LogintoVault.html">
+      <Link>HelpFiles\C.2.1LogintoVault.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.2NewComponents.html">
+      <Link>HelpFiles\C.2.2NewComponents.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.3SaveCopyAs.3DComponent.html">
+      <Link>HelpFiles\C.2.3SaveCopyAs.3DComponent.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.4Copy3DComponent.html">
+      <Link>HelpFiles\C.2.4Copy3DComponent.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.5NewPresentationFile.html">
+      <Link>HelpFiles\C.2.5NewPresentationFile.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.6NewDrawing.html">
+      <Link>HelpFiles\C.2.6NewDrawing.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.7SaveCopyAs.Drawing.html">
+      <Link>HelpFiles\C.2.7SaveCopyAs.Drawing.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.8Replacewithcopyincl.Documentation.html">
+      <Link>HelpFiles\C.2.8Replacewithcopyincl.Documentation.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2.9EditDatasheet.html">
+      <Link>HelpFiles\C.2.9EditDatasheet.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.2Inventor.html">
+      <Link>HelpFiles\C.2Inventor.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.3.1LogintoVault.html">
+      <Link>HelpFiles\C.3.1LogintoVault.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.3.2NewDrawing.html">
+      <Link>HelpFiles\C.3.2NewDrawing.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.3.3EditDatasheet.Titleblock.html">
+      <Link>HelpFiles\C.3.3EditDatasheet.Titleblock.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.3.4Legacydata.html">
+      <Link>HelpFiles\C.3.4Legacydata.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.3.5Navigation.html">
+      <Link>HelpFiles\C.3.5Navigation.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.3AutoCAD.html">
+      <Link>HelpFiles\C.3AutoCAD.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\CAD.html">
+      <Link>HelpFiles\CAD.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\contents.htm">
+      <Link>HelpFiles\contents.htm</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.1.1MultiLanguage.html">
+      <Link>HelpFiles\G.1.1MultiLanguage.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.1.2ObjectNumbering%28Since2015R2%29.html">
+      <Link>HelpFiles\G.1.2ObjectNumbering%28Since2015R2%29.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.1.3FileNumbering%28Since2015R2%29.html">
+      <Link>HelpFiles\G.1.3FileNumbering%28Since2015R2%29.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.1.4FileTemplates.html">
+      <Link>HelpFiles\G.1.4FileTemplates.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.1Administration.html">
+      <Link>HelpFiles\G.1Administration.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.1CustomCommand.GoToSource.Replacemen.html">
+      <Link>HelpFiles\G.2.1CustomCommand.GoToSource.Replacemen.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.2FileTab.Jobs.html">
+      <Link>HelpFiles\G.2.2FileTab.Jobs.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.3ERPTab.html">
+      <Link>HelpFiles\G.2.3ERPTab.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.4CAD-BOMExport.html">
+      <Link>HelpFiles\G.2.4CAD-BOMExport.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.5CreateThinClientLinks.html">
+      <Link>HelpFiles\G.2.5CreateThinClientLinks.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.6DocumentStructureTab.html">
+      <Link>HelpFiles\G.2.6DocumentStructureTab.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.7CreateProject.Subfolders&amp;Properties.html">
+      <Link>HelpFiles\G.2.7CreateProject.Subfolders&amp;Properties.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.8Projectbasedfilenumbering.html">
+      <Link>HelpFiles\G.2.8Projectbasedfilenumbering.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2.9Inheritprojectmetadatatofiles.html">
+      <Link>HelpFiles\G.2.9Inheritprojectmetadatatofiles.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.2Extensions.html">
+      <Link>HelpFiles\G.2Extensions.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\G.3Support.html">
+      <Link>HelpFiles\G.3Support.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\General.html">
+      <Link>HelpFiles\General.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\index.html">
+      <Link>HelpFiles\index.html</Link>
+    </Content>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\MapMarkers\TaskCompleteIcon-7.gif">
+      <Link>HelpFiles\MapMarkers\TaskCompleteIcon-7.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\MapMarkers\TaskCompleteIcon-8.gif">
+      <Link>HelpFiles\MapMarkers\TaskCompleteIcon-8.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic10NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic10NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic10NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic10NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic11NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic11NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic11NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic11NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic12NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic12NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic12NotesImage11.jpg">
+      <Link>HelpFiles\NotesImages\Topic12NotesImage11.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic12NotesImage12.jpg">
+      <Link>HelpFiles\NotesImages\Topic12NotesImage12.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic12NotesImage15.jpg">
+      <Link>HelpFiles\NotesImages\Topic12NotesImage15.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic12NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic12NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic12NotesImage6.jpg">
+      <Link>HelpFiles\NotesImages\Topic12NotesImage6.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic13NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic13NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic13NotesImage12.gif">
+      <Link>HelpFiles\NotesImages\Topic13NotesImage12.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic13NotesImage13.jpg">
+      <Link>HelpFiles\NotesImages\Topic13NotesImage13.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic13NotesImage16.jpg">
+      <Link>HelpFiles\NotesImages\Topic13NotesImage16.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic13NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic13NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic13NotesImage6.jpg">
+      <Link>HelpFiles\NotesImages\Topic13NotesImage6.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic14NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic14NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic14NotesImage10.jpg">
+      <Link>HelpFiles\NotesImages\Topic14NotesImage10.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic14NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic14NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic14NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic14NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic14NotesImage9.jpg">
+      <Link>HelpFiles\NotesImages\Topic14NotesImage9.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic15NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic15NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic16NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic16NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic17NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic17NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic18NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic18NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic18NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic18NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic18NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic18NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic18NotesImage6.jpg">
+      <Link>HelpFiles\NotesImages\Topic18NotesImage6.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic19NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic19NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic19NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic19NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic19NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic19NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic19NotesImage6.jpg">
+      <Link>HelpFiles\NotesImages\Topic19NotesImage6.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic20NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic20NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic20NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic20NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic20NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic20NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic20NotesImage6.jpg">
+      <Link>HelpFiles\NotesImages\Topic20NotesImage6.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic21NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic21NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic21NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic21NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic21NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic21NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic23NotesImage14.jpg">
+      <Link>HelpFiles\NotesImages\Topic23NotesImage14.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic24NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic24NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic24NotesImage3.gif">
+      <Link>HelpFiles\NotesImages\Topic24NotesImage3.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage12.gif">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage12.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage13.gif">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage13.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage14.jpg">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage14.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage15.jpg">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage15.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage6.jpg">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage6.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage7.jpg">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage7.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic25NotesImage8.jpg">
+      <Link>HelpFiles\NotesImages\Topic25NotesImage8.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic26NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic26NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic26NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic26NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic26NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic26NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic27NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic27NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic27NotesImage11.jpg">
+      <Link>HelpFiles\NotesImages\Topic27NotesImage11.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic27NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic27NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic27NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic27NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic27NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic27NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic27NotesImage9.jpg">
+      <Link>HelpFiles\NotesImages\Topic27NotesImage9.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic29NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic29NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic29NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic29NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic29NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic29NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic29NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic29NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic29NotesImage7.jpg">
+      <Link>HelpFiles\NotesImages\Topic29NotesImage7.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic33NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic33NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic33NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic33NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic33NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic33NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic34NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic34NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic35NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic35NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic35NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic35NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic36NotesImage6.jpg">
+      <Link>HelpFiles\NotesImages\Topic36NotesImage6.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic36NotesImage7.jpg">
+      <Link>HelpFiles\NotesImages\Topic36NotesImage7.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic37NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic37NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic37NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic37NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic38NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic38NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic38NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic38NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic39NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic39NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic39NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic39NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic39NotesImage4.gif">
+      <Link>HelpFiles\NotesImages\Topic39NotesImage4.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic39NotesImage7.gif">
+      <Link>HelpFiles\NotesImages\Topic39NotesImage7.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic39NotesImage8.gif">
+      <Link>HelpFiles\NotesImages\Topic39NotesImage8.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic40NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic40NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic40NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic40NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic41NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic41NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic41NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic41NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic41NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic41NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic41NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic41NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic41NotesImage8.gif">
+      <Link>HelpFiles\NotesImages\Topic41NotesImage8.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic42NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic42NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic42NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic42NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic44NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic44NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic45NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic45NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic45NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic45NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic46NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic46NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic46NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic46NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic46NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic46NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic47NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic47NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic47NotesImage2.gif">
+      <Link>HelpFiles\NotesImages\Topic47NotesImage2.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic47NotesImage3.gif">
+      <Link>HelpFiles\NotesImages\Topic47NotesImage3.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic47NotesImage4.gif">
+      <Link>HelpFiles\NotesImages\Topic47NotesImage4.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic47NotesImage9.gif">
+      <Link>HelpFiles\NotesImages\Topic47NotesImage9.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic48NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic48NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic48NotesImage2.gif">
+      <Link>HelpFiles\NotesImages\Topic48NotesImage2.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic50NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic50NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic51NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic51NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic51NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic51NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic51NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic51NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic51NotesImage5.gif">
+      <Link>HelpFiles\NotesImages\Topic51NotesImage5.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic51NotesImage7.gif">
+      <Link>HelpFiles\NotesImages\Topic51NotesImage7.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic52NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic52NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic52NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic52NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic52NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic52NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic52NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic52NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic53NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic53NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic53NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic53NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic53NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic53NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic53NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic53NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic54NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic54NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic54NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic54NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic54NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic54NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic54NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic54NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic55NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic55NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic55NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic55NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic55NotesImage4.jpg">
+      <Link>HelpFiles\NotesImages\Topic55NotesImage4.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic55NotesImage5.jpg">
+      <Link>HelpFiles\NotesImages\Topic55NotesImage5.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic57NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic57NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic58NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic58NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic59NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic59NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic5NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic5NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic5NotesImage3.gif">
+      <Link>HelpFiles\NotesImages\Topic5NotesImage3.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic60NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic60NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic61NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic61NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic62NotesImage2.gif">
+      <Link>HelpFiles\NotesImages\Topic62NotesImage2.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic67NotesImage1.gif">
+      <Link>HelpFiles\NotesImages\Topic67NotesImage1.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic67NotesImage2.gif">
+      <Link>HelpFiles\NotesImages\Topic67NotesImage2.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic8NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic8NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic8NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic8NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage1.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage1.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage13.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage13.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage14.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage14.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage2.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage2.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage3.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage3.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage7.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage7.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage8.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage8.jpg</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\NotesImages\Topic9NotesImage9.jpg">
+      <Link>HelpFiles\NotesImages\Topic9NotesImage9.jpg</Link>
+    </Resource>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\code\boxController.js">
+      <Link>HelpFiles\Res\code\boxController.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\code\boxSettings.js">
+      <Link>HelpFiles\Res\code\boxSettings.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\code\mapController.js">
+      <Link>HelpFiles\Res\code\mapController.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\code\shared.js">
+      <Link>HelpFiles\Res\code\shared.js</Link>
+    </Content>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\arrow.gif">
+      <Link>HelpFiles\Res\images\arrow.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\box_collapse_button.gif">
+      <Link>HelpFiles\Res\images\box_collapse_button.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\box_expand_button.gif">
+      <Link>HelpFiles\Res\images\box_expand_button.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\bullet_blue.gif">
+      <Link>HelpFiles\Res\images\bullet_blue.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\empty.gif">
+      <Link>HelpFiles\Res\images\empty.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\header_background.gif">
+      <Link>HelpFiles\Res\images\header_background.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\logo.gif">
+      <Link>HelpFiles\Res\images\logo.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\next_button.gif">
+      <Link>HelpFiles\Res\images\next_button.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\previous_button.gif">
+      <Link>HelpFiles\Res\images\previous_button.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\spacer.gif">
+      <Link>HelpFiles\Res\images\spacer.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\images\top_button.gif">
+      <Link>HelpFiles\Res\images\top_button.gif</Link>
+    </Resource>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\styles\DynamicOutline.css">
+      <Link>HelpFiles\Res\styles\DynamicOutline.css</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\styles\shared.css">
+      <Link>HelpFiles\Res\styles\shared.css</Link>
+    </Content>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\base.gif">
+      <Link>HelpFiles\Res\tree\base.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\empty.gif">
+      <Link>HelpFiles\Res\tree\empty.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\folder.gif">
+      <Link>HelpFiles\Res\tree\folder.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\folderopen.gif">
+      <Link>HelpFiles\Res\tree\folderopen.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\join.gif">
+      <Link>HelpFiles\Res\tree\join.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\joinbottom.gif">
+      <Link>HelpFiles\Res\tree\joinbottom.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\leaf.gif">
+      <Link>HelpFiles\Res\tree\leaf.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\line.gif">
+      <Link>HelpFiles\Res\tree\line.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\minus.gif">
+      <Link>HelpFiles\Res\tree\minus.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\minusbottom.gif">
+      <Link>HelpFiles\Res\tree\minusbottom.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\null.gif">
+      <Link>HelpFiles\Res\tree\null.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\page.gif">
+      <Link>HelpFiles\Res\tree\page.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\pagesel.gif">
+      <Link>HelpFiles\Res\tree\pagesel.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\plus.gif">
+      <Link>HelpFiles\Res\tree\plus.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\plusbottom.gif">
+      <Link>HelpFiles\Res\tree\plusbottom.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\topic.gif">
+      <Link>HelpFiles\Res\tree\topic.gif</Link>
+    </Resource>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\tree.js">
+      <Link>HelpFiles\Res\tree\tree.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\tree_items.js">
+      <Link>HelpFiles\Res\tree\tree_items.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Res\tree\tree_tpl.js">
+      <Link>HelpFiles\Res\tree\tree_tpl.js</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.1.1CreateFolder.project....html">
+      <Link>HelpFiles\V.1.1CreateFolder.project....html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.1.2Numbering.html">
+      <Link>HelpFiles\V.1.2Numbering.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.1.3EditFolderdatasheet.html">
+      <Link>HelpFiles\V.1.3EditFolderdatasheet.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.1Folder.html">
+      <Link>HelpFiles\V.1Folder.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.2.1CreateFiles....html">
+      <Link>HelpFiles\V.2.1CreateFiles....html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.2.2RequiredFields.html">
+      <Link>HelpFiles\V.2.2RequiredFields.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.2.3Navigation.html">
+      <Link>HelpFiles\V.2.3Navigation.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.2.4Numbering.html">
+      <Link>HelpFiles\V.2.4Numbering.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.2.5EditFileDatasheet.html">
+      <Link>HelpFiles\V.2.5EditFileDatasheet.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.2File.html">
+      <Link>HelpFiles\V.2File.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.3.1CreateFiles....html">
+      <Link>HelpFiles\V.3.1CreateFiles....html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.3.2RequiredFields.html">
+      <Link>HelpFiles\V.3.2RequiredFields.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.3.3Navigation.html">
+      <Link>HelpFiles\V.3.3Navigation.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.3.4Numbering.html">
+      <Link>HelpFiles\V.3.4Numbering.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.3.5EditFileDatasheet.html">
+      <Link>HelpFiles\V.3.5EditFileDatasheet.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.3OfficeFile.html">
+      <Link>HelpFiles\V.3OfficeFile.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.4Datasheet.html">
+      <Link>HelpFiles\V.4Datasheet.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.5CADBOM.html">
+      <Link>HelpFiles\V.5CADBOM.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.6.1Create.EditTasks.html">
+      <Link>HelpFiles\V.6.1Create.EditTasks.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.6.2Create.EditOrganisations.html">
+      <Link>HelpFiles\V.6.2Create.EditOrganisations.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.6.3Create.EditPersons.html">
+      <Link>HelpFiles\V.6.3Create.EditPersons.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.6.4Create.EditTransmittals.html">
+      <Link>HelpFiles\V.6.4Create.EditTransmittals.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.6CustomObject.html">
+      <Link>HelpFiles\V.6CustomObject.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\V.7ReserveNumbers.html">
+      <Link>HelpFiles\V.7ReserveNumbers.html</Link>
+    </Content>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\Vault.html">
+      <Link>HelpFiles\Vault.html</Link>
+    </Content>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\About.ico">
+      <Link>Vault.Custom\About.ico</Link>
+    </Resource>
+    <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\QuickstartUtilityLibrary.dll">
+      <Link>Vault.Custom\addinVault\QuickstartUtilityLibrary.dll</Link>
+    </Content>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Claim-add.ico">
+      <Link>Vault.Custom\Claim-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Claim-edit.ico">
+      <Link>Vault.Custom\Claim-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Claim-info.ico">
+      <Link>Vault.Custom\Claim-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Claim-settings.ico">
+      <Link>Vault.Custom\Claim-settings.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ConfigurationVersionHistory.xml">
+      <Link>Vault.Custom\ConfigurationVersionHistory.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.File.xml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.File.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.FileOffice.xml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.FileOffice.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\VaultDynamicProperties.xml">
+      <Link>Vault.Custom\Configuration\VaultDynamicProperties.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\CustomHelpDoc.ico">
+      <Link>Vault.Custom\CustomHelpDoc.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\doc-box-add.ico">
+      <Link>Vault.Custom\doc-box-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\doc-box-edit.ico">
+      <Link>Vault.Custom\doc-box-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\doc-box-info.ico">
+      <Link>Vault.Custom\doc-box-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\doc-box.ico">
+      <Link>Vault.Custom\doc-box.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ECR-add.ico">
+      <Link>Vault.Custom\ECR-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ECR-edit.ico">
+      <Link>Vault.Custom\ECR-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ECR-info.ico">
+      <Link>Vault.Custom\ECR-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ECR.ico">
+      <Link>Vault.Custom\ECR.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\EditCO.ico">
+      <Link>Vault.Custom\EditCO.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\EditCustomObject.ico">
+      <Link>Vault.Custom\EditCustomObject.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\EditFileDatasheet.ico">
+      <Link>Vault.Custom\EditFileDatasheet.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\EditFolderDatasheet.ico">
+      <Link>Vault.Custom\EditFolderDatasheet.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\factory-add.ico">
+      <Link>Vault.Custom\factory-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\factory-edit.ico">
+      <Link>Vault.Custom\factory-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\factory-info.ico">
+      <Link>Vault.Custom\factory-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\factory.ico">
+      <Link>Vault.Custom\factory.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Folder2018.xml">
+      <Link>Vault.Custom\Folder2018.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Folder2019.xml">
+      <Link>Vault.Custom\Folder2019.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Lock.ico">
+      <Link>Vault.Custom\Lock.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Log.ico">
+      <Link>Vault.Custom\Log.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\MenuDefinitions.xml">
+      <Link>Vault.Custom\MenuDefinitions.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Milestone-add.ico">
+      <Link>Vault.Custom\Milestone-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Milestone-edit.ico">
+      <Link>Vault.Custom\Milestone-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Milestone-info.ico">
+      <Link>Vault.Custom\Milestone-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Milestone-ok.ico">
+      <Link>Vault.Custom\Milestone-ok.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\NewCO.ico">
+      <Link>Vault.Custom\NewCO.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\NewStandardFile.ico">
+      <Link>Vault.Custom\NewStandardFile.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\NewStandardFolder.ico">
+      <Link>Vault.Custom\NewStandardFolder.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\QR-add.ico">
+      <Link>Vault.Custom\QR-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\QR-edit.ico">
+      <Link>Vault.Custom\QR-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\QR-info.ico">
+      <Link>Vault.Custom\QR-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\QR.ico">
+      <Link>Vault.Custom\QR.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ReservedNumExport.ico">
+      <Link>Vault.Custom\ReservedNumExport.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\ReserveNumbers.ico">
+      <Link>Vault.Custom\ReserveNumbers.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Service-add.ico">
+      <Link>Vault.Custom\Service-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Service-edit.ico">
+      <Link>Vault.Custom\Service-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Service-info.ico">
+      <Link>Vault.Custom\Service-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Service.ico">
+      <Link>Vault.Custom\Service.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\task-add.ico">
+      <Link>Vault.Custom\task-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\task-edit.ico">
+      <Link>Vault.Custom\task-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\task-info.ico">
+      <Link>Vault.Custom\task-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\task.ico">
+      <Link>Vault.Custom\task.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Term-add.ico">
+      <Link>Vault.Custom\Term-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Term-edit.ico">
+      <Link>Vault.Custom\Term-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Term-info.ico">
+      <Link>Vault.Custom\Term-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Term-ok.ico">
+      <Link>Vault.Custom\Term-ok.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\TimOff-add.ico">
+      <Link>Vault.Custom\TimOff-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\TimOff-edit.ico">
+      <Link>Vault.Custom\TimOff-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\TimOff-info.ico">
+      <Link>Vault.Custom\TimOff-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\TimOff.ico">
+      <Link>Vault.Custom\TimOff.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Transmittal-add.ico">
+      <Link>Vault.Custom\Transmittal-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Transmittal-edit.ico">
+      <Link>Vault.Custom\Transmittal-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Transmittal-info.ico">
+      <Link>Vault.Custom\Transmittal-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Transmittal.ico">
+      <Link>Vault.Custom\Transmittal.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\user-w-add.ico">
+      <Link>Vault.Custom\user-w-add.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\user-w-edit.ico">
+      <Link>Vault.Custom\user-w-edit.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\user-w-info.ico">
+      <Link>Vault.Custom\user-w-info.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\user-w.ico">
+      <Link>Vault.Custom\user-w.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Vault.ico">
+      <Link>Vault.Custom\Vault.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\About.ico">
+      <Link>Vault\About.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\File.xml">
+      <Link>Vault\Configuration\File.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\FileOffice.xml">
+      <Link>Vault\Configuration\FileOffice.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\attachment.png">
+      <Link>Vault\Configuration\Item\Icons\attachment.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\docx.png">
+      <Link>Vault\Configuration\Item\Icons\docx.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\dwg.png">
+      <Link>Vault\Configuration\Item\Icons\dwg.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\iam.png">
+      <Link>Vault\Configuration\Item\Icons\iam.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\idw.png">
+      <Link>Vault\Configuration\Item\Icons\idw.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\ipn.png">
+      <Link>Vault\Configuration\Item\Icons\ipn.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\ipt.png">
+      <Link>Vault\Configuration\Item\Icons\ipt.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\linkedfile.png">
+      <Link>Vault\Configuration\Item\Icons\linkedfile.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\mdb.png">
+      <Link>Vault\Configuration\Item\Icons\mdb.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\pdf.png">
+      <Link>Vault\Configuration\Item\Icons\pdf.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\pptx.png">
+      <Link>Vault\Configuration\Item\Icons\pptx.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\Primary.png">
+      <Link>Vault\Configuration\Item\Icons\Primary.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\PrimarySub.png">
+      <Link>Vault\Configuration\Item\Icons\PrimarySub.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\Secondary.png">
+      <Link>Vault\Configuration\Item\Icons\Secondary.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\SecondarySub.png">
+      <Link>Vault\Configuration\Item\Icons\SecondarySub.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\StandardComponent.png">
+      <Link>Vault\Configuration\Item\Icons\StandardComponent.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\unknown.png">
+      <Link>Vault\Configuration\Item\Icons\unknown.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Icons\xlsx.png">
+      <Link>Vault\Configuration\Item\Icons\xlsx.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\DSLanguages.xml">
+      <Link>Vault\DSLanguages.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\EditFileDatasheet.ico">
+      <Link>Vault\EditFileDatasheet.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\EditFolderDatasheet.ico">
+      <Link>Vault\EditFolderDatasheet.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Log.ico">
+      <Link>Vault\Log.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\MenuDefinitions.xml">
+      <Link>Vault\MenuDefinitions.xml</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\NewStandardFile.ico">
+      <Link>Vault\NewStandardFile.ico</Link>
+    </Resource>
+    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\NewStandardFolder.ico">
+      <Link>Vault\NewStandardFolder.ico</Link>
+    </Resource>
+    <Content Include="dataStandard.UI.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCAD.xaml">
+      <Link>CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCAD.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCAD.xaml">
+      <Link>CAD.Custom\Configuration\AutoCAD.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\CableAndHarness.xaml">
+      <Link>CAD.Custom\Configuration\CableAndHarness.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\DesignAccelerator.xaml">
+      <Link>CAD.Custom\Configuration\DesignAccelerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\FrameGenerator.xaml">
+      <Link>CAD.Custom\Configuration\FrameGenerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\Inventor.xaml">
+      <Link>CAD.Custom\Configuration\Inventor.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\SaveCopyAs.xaml">
+      <Link>CAD.Custom\Configuration\SaveCopyAs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\TubeAndPipe.xaml">
+      <Link>CAD.Custom\Configuration\TubeAndPipe.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD-Vanilla.xaml">
+      <Link>CAD\Configuration\AutoCAD-Vanilla.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\AutoCAD.xaml">
+      <Link>CAD\Configuration\AutoCAD.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\CableAndHarness.xaml">
+      <Link>CAD\Configuration\CableAndHarness.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\DesignAccelerator.xaml">
+      <Link>CAD\Configuration\DesignAccelerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\FrameGenerator.xaml">
+      <Link>CAD\Configuration\FrameGenerator.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\Inventor.xaml">
+      <Link>CAD\Configuration\Inventor.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\SaveCopyAs.xaml">
+      <Link>CAD\Configuration\SaveCopyAs.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\TubeAndPipe.xaml">
+      <Link>CAD\Configuration\TubeAndPipe.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.CustomObject.xaml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.CustomObject.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.File.xaml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.File.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.FileOffice.xaml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.FileOffice.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.Folder.xaml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.Folder.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.ReserveNumbers.xaml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.ReserveNumbers.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Aufgabe\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>Vault.Custom\Configuration\Aufgabe\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\ADSK.QS.CAD BOM.xaml">
+      <Link>Vault.Custom\Configuration\File\ADSK.QS.CAD BOM.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\ADSK.QS.FileDataSheet.xaml">
+      <Link>Vault.Custom\Configuration\File\ADSK.QS.FileDataSheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Folder\ADSK.QS.FolderDataSheet.xaml">
+      <Link>Vault.Custom\Configuration\Folder\ADSK.QS.FolderDataSheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Organisation\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>Vault.Custom\Configuration\Organisation\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Person\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>Vault.Custom\Configuration\Person\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Sendung\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>Vault.Custom\Configuration\Sendung\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Task\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>Vault.Custom\Configuration\Task\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Transmittal\ADSK.QS.CUSTENT.Datasheet.xaml">
+      <Link>Vault.Custom\Configuration\Transmittal\ADSK.QS.CUSTENT.Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\CustomObject.xaml">
+      <Link>Vault\Configuration\CustomObject.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Eco\Datasheet.xaml">
+      <Link>Vault\Configuration\Eco\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\File.xaml">
+      <Link>Vault\Configuration\File.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\FileOffice.xaml">
+      <Link>Vault\Configuration\FileOffice.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\File\CAD BOM.xaml">
+      <Link>Vault\Configuration\File\CAD BOM.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\File\Datasheet.xaml">
+      <Link>Vault\Configuration\File\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Folder.xaml">
+      <Link>Vault\Configuration\Folder.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Folder\Datasheet.xaml">
+      <Link>Vault\Configuration\Folder\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Associated Files.xaml">
+      <Link>Vault\Configuration\Item\Associated Files.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Item\Datasheet.xaml">
+      <Link>Vault\Configuration\Item\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\Configuration\Task\Datasheet.xaml">
+      <Link>Vault\Configuration\Task\Datasheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
