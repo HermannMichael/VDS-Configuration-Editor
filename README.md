@@ -13,7 +13,7 @@ Efficiently edit and extend Vault Data Standard Configurations using this Visual
 WPF type projects linking the default (RTM) and Quickstart (Autodesk Technical Sales EMEA issued Sample) configuration of VDS; 
 	VDS has to be installed though. 
 - VDS-2018.1-ConfigLinks: Project to visually edit XAML Dialogs or Tabs and edit all powershell scripts. Configuration files are linked that
-	allows to directly edit your active configuration. Use separate folders for different configuration file sets, e.g. 2018.1-Quickstart uses
+	allows to directly edit your active configuration. Use separate projects for different configuration file sets, e.g. 2018.1-ConfigLinks-Quickstart uses
 	custom names for scripts and additional configruation files. This project references 2018.2 SDK and VDS 2018.1 libraries.
 - VDS-2019-ConfigLinks: the same as before, just referencing 2019 SDK and 2019 VDS libraries.
 
