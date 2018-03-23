@@ -9,7 +9,7 @@ Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "API-2019-ScriptEditor", "AP
 EndProject
 Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "VDS_SnippetsAndTemplates", "VDS_SnippetsAndTemplates\VDS_SnippetsAndTemplates.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README ETC.", "README ETC.", "{F4A0592A-F834-4152-8E3E-77031E02F8E0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_README ETC.", "_README ETC.", "{F4A0592A-F834-4152-8E3E-77031E02F8E0}"
 	ProjectSection(SolutionItems) = preProject
 		Disclaimer.txt = Disclaimer.txt
 		README.md = README.md
