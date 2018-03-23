@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README ETC.", "README ETC."
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2018.1-ConfigLinks-Quickstart", "VDS-2018.1-ConfigLinks-Quickstart\VDS-2018.1-ConfigLinks-Quickstart.csproj", "{0CB518B3-9D28-4F76-B5DC-BABC698D8C74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2018.1-ConfigEditor", "VDS-2018.1-ConfigEditor\VDS-2018.1-ConfigEditor.csproj", "{2C03946D-2767-42D7-BF04-FCEF8EE89B75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,12 @@ Global
 		{0CB518B3-9D28-4F76-B5DC-BABC698D8C74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0CB518B3-9D28-4F76-B5DC-BABC698D8C74}.WiP|Any CPU.ActiveCfg = Release|Any CPU
 		{0CB518B3-9D28-4F76-B5DC-BABC698D8C74}.WiP|Any CPU.Build.0 = Release|Any CPU
+		{2C03946D-2767-42D7-BF04-FCEF8EE89B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C03946D-2767-42D7-BF04-FCEF8EE89B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C03946D-2767-42D7-BF04-FCEF8EE89B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C03946D-2767-42D7-BF04-FCEF8EE89B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C03946D-2767-42D7-BF04-FCEF8EE89B75}.WiP|Any CPU.ActiveCfg = Release|Any CPU
+		{2C03946D-2767-42D7-BF04-FCEF8EE89B75}.WiP|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
