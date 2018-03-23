@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README ETC.", "README ETC."
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2018.1-ConfigLinks-Quickstart", "VDS-2018.1-ConfigLinks\VDS-2018.1-ConfigLinks-Quickstart.csproj", "{0CB518B3-9D28-4F76-B5DC-BABC698D8C74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2018.1-ConfigLinks-Quickstart", "VDS-2018.1-ConfigLinks-Quickstart\VDS-2018.1-ConfigLinks-Quickstart.csproj", "{0CB518B3-9D28-4F76-B5DC-BABC698D8C74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
