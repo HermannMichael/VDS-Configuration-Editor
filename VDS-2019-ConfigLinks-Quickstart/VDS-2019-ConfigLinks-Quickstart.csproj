@@ -116,6 +116,9 @@
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\debug.log">
       <Link>HelpFiles\debug.log</Link>
     </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.ActivateSchedTaskAsJob.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.QS.ActivateSchedTaskAsJob.ps1</Link>
+    </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.Default.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.Default.ps1</Link>
     </None>
@@ -124,6 +127,9 @@
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.ActivateSchedTask.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.ActivateSchedTask.ps1</Link>
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.CreateCustomObject.ps1">
       <Link>Vault.Custom\addinVault\Menus\ADSK.QS.CreateCustomObject.ps1</Link>
@@ -214,6 +220,7 @@
     </Resource>
     <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\en-US\UIStrings.xml">
       <Link>en-US\UIStrings.xml</Link>
+      <SubType>Designer</SubType>
     </Resource>
     <Content Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\C.1GeneralInformation.html">
       <Link>HelpFiles\C.1GeneralInformation.html</Link>
@@ -1345,6 +1352,11 @@
     </Page>
     <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD\Configuration\TubeAndPipe.xaml">
       <Link>CAD\Configuration\TubeAndPipe.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.ActivateSchedTask.xaml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.ActivateSchedTask.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -27,33 +27,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Script Templates\" />
+    <Folder Include="Script-Libraries\" />
+    <Folder Include="Script-Samples\" />
     <Folder Include="Snippet Templates\" />
     <Folder Include="VDS Script Snippets\" />
     <Folder Include="VDS XAML Snippets\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Script Templates\Capture-Restore-CmbSelection.ps1" />
-    <Compile Include="Script Templates\CopyProjectFolderTitleToCADFile.ps1" />
-    <Compile Include="Script Templates\CopyProjectFolderTitleToVaultFile.ps1" />
-    <Compile Include="Script Templates\CreateFolder_Subfolders_Properties.ps1" />
-    <Compile Include="Script Templates\CustomObjectBreadCrumb.ps1" />
-    <Compile Include="Script Templates\Default_QS-Extensions.ps1" />
-    <Compile Include="Script Templates\FileOpenDialog.ps1" />
-    <Compile Include="Script Templates\FolderBreadCrumb.ps1" />
-    <Compile Include="Script Templates\GetUserGroupMembership.ps1" />
-    <Compile Include="Script Templates\GoToReplacedBy.ps1" />
-    <Compile Include="Script Templates\GoToSourceFile.ps1" />
-    <Compile Include="Script Templates\myOnPostCloseDialog.ps1" />
-    <Compile Include="Script Templates\NumberschemePropInput_OnPostClose.ps1" />
-    <Compile Include="Script Templates\PowerShell-Debug.ps1" />
-    <Compile Include="Script Templates\SaveAsDialog.ps1" />
-    <Compile Include="Script Templates\Unblock_QuickstartScripts.ps1" />
-    <Compile Include="Script Templates\VaultConnection.ps1" />
-    <Compile Include="Script Templates\VaultItemSearch.ps1" />
+    <Compile Include="Script-Samples\Capture-Restore-CmbSelection.ps1" />
+    <Compile Include="Script-Samples\CopyProjectFolderTitleToCADFile.ps1" />
+    <Compile Include="Script-Samples\CopyProjectFolderTitleToVaultFile.ps1" />
+    <Compile Include="Script-Samples\CreateFolder_Subfolders_Properties.ps1" />
+    <Compile Include="Script-Samples\CustomObjectBreadCrumb.ps1" />
+    <Compile Include="Script-Samples\FileOpenDialog.ps1" />
+    <Compile Include="Script-Samples\FolderBreadCrumb.ps1" />
+    <Compile Include="Script-Samples\GetUserGroupMembership_2014-2018.ps1" />
+    <Compile Include="Script-Samples\GoToReplacedBy.ps1" />
+    <Compile Include="Script-Samples\GoToSourceFile.ps1" />
+    <Compile Include="Script-Samples\myOnPostCloseDialog.ps1" />
+    <Compile Include="Script-Samples\NumberschemePropInput_OnPostClose.ps1" />
+    <Compile Include="Script-Samples\PowerShell-Debug.ps1" />
+    <Compile Include="Script-Libraries\QuickstartExtension.ps1" />
+    <Compile Include="Script-Samples\SaveAsDialog.ps1" />
+    <Compile Include="Script-Samples\Unblock_QuickstartScripts.ps1" />
+    <Compile Include="Script-Samples\VaultConnection.ps1" />
+    <Compile Include="Script-Samples\VaultItemSearch.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Script Templates\Script Templates.pssproj" />
     <Content Include="Snippet Templates\VDS-PS-Snippet.snippet" />
     <Content Include="Snippet Templates\VDS-XAML-Snippet.snippet" />
     <Content Include="VDS Script Snippets\DataContext.snippet" />
