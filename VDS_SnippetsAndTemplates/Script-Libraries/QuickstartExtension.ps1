@@ -10,7 +10,11 @@
 #=============================================================================#
 #endregion
 
-# Version Info - VDS Quickstart Extension 2018.0.5
+#region - version history
+# Version Info - VDS Quickstart Extension 2019.0.0
+# new function ADSK.GroupMemberOf() 
+
+#endregion
 
 #retrieve property value given by displayname from folder (ID)
 function mGetFolderPropValue ([Int64] $mFldID, [STRING] $mDispName)
@@ -125,7 +129,7 @@ function mGetFolderNumber($_FileNumber, $_nChar)
 function mGetUIStrings
 {
 	# check language override settings of VDS
-	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault\DSLanguages.xml"
+	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\DSLanguages.xml"
 	$mUICodes = $mDSLangFile.SelectNodes("/DSLanguages/Language_Code")
 	$mLCode = @{}
 	Foreach ($xmlAttr in $mUICodes)
@@ -139,7 +143,7 @@ function mGetUIStrings
 		$mVdsUi = $mLCode["UI"]
 	} 
 	Else{$mVdsUi=$PSUICulture}
-	[xml]$mUIStrFile = get-content ("C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\" + $mVdsUi + "\UIStrings.xml")
+	[xml]$mUIStrFile = get-content ("C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\" + $mVdsUi + "\UIStrings.xml")
 	$UIString = @{}
 	$xmlUIStrs = $mUIStrFile.SelectNodes("/UIStrings/UIString")
 	Foreach ($xmlAttr in $xmlUIStrs) {
@@ -155,7 +159,7 @@ function mGetUIStrings
 function mGetPropTranslations
 {
 	# check language override settings of VDS
-	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault\DSLanguages.xml"
+	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\DSLanguages.xml"
 	$mUICodes = $mDSLangFile.SelectNodes("/DSLanguages/Language_Code")
 	$mLCode = @{}
 	Foreach ($xmlAttr in $mUICodes)
@@ -171,7 +175,7 @@ function mGetPropTranslations
 	Else{
 		$mVdsUi=$PSUICulture
 	}
-	[xml]$mPrpTrnsltnFile = get-content ("C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\" + $mVdsDb + "\PropertyTranslations.xml")
+	[xml]$mPrpTrnsltnFile = get-content ("C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\" + $mVdsDb + "\PropertyTranslations.xml")
 	$mPrpTrnsltns = @{}
 	$xmlPrpTrnsltns = $mPrpTrnsltnFile.SelectNodes("/PropertyTranslations/PropertyTranslation")
 	Foreach ($xmlAttr in $xmlPrpTrnsltns) {
@@ -234,4 +238,20 @@ function Adsk.CreateTCItemLink ([Long]$ItemId)
 
     $TCLink = $serverUri.Scheme + "://" + $Server + "/AutodeskTC/" + $Server + "/" + $vaultName + "/#/Entity/Details?id=m" + "$PersID" + "&itemtype=Item"
     return $TCLink
+}
+
+#function to check that the current user is member of a named group; returns true or false
+function Adsk.GroupMemberOf([STRING]$mGroupName)
+{
+	$mGroupInfo = New-Object Autodesk.Connectivity.WebServices.GroupInfo
+	$mGroup = $vault.AdminService.GetGroupByName($mGroupName)
+	$mGroupInfo = $vault.AdminService.GetGroupInfoByGroupId($mGroup.Id)
+	foreach ($user in $mGroupInfo.Users)
+	{
+		if($vault.AdminService.SecurityHeader.UserId -eq $user.Id)
+		{				
+			return $true
+		}
+	}
+	return $false
 }

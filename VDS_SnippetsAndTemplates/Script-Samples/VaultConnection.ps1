@@ -1,42 +1,24 @@
-﻿# Connect to Vault Webservices to use API
-#
-$mVltUtilsDll = [System.IO.File]::ReadAllBytes("C:\Users\Marku\OneDrive\VStudio Projects\VDSUtils2017\VDSUtils\obj\Debug\VDSUtils.dll")
-[System.Reflection.Assembly]::Load($mVltUtilsDll)
-[System.Reflection.Assembly]::LoadFrom("C:\Program Files\Autodesk\Vault Professional 2017\Explorer\Autodesk.Connectivity.WebServices.dll")
-#[System.Reflection.Assembly]::LoadFrom("C:\Users\Marku\OneDrive\VStudio Projects\VDSUtils2017\VDSUtils\obj\Debug\VDSUtils.dll")
+﻿#region disclaimer
+	#===============================================================================#
+	# PowerShell script sample														#
+	# Author: Markus Koechl															#
+	# Copyright (c) Autodesk 2018													#
+	#																				#
+	# THIS SCRIPT/CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER     #
+	# EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES   #
+	# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.    #
+	#===============================================================================#
+#endregion
 
-$server="192.168.85.128"
-$vaultName="VLT-MKDE"
-$username ="Administrator"
-$passw = ""
-
-$_VltHelpers = New-Object VDSUtils.VltHelpers
-$credRW = $_VltHelpers.UserCredentials1($server, $vaultName, $username, $passw)
-#$credRO = $_VltHelpers.UserCredentials2($server, $vaultName, $username, $passw) #returns readonly user
-
-$vault = New-Object Autodesk.Connectivity.WebServicesTools.WebServiceManager($credRW)
-#$vaultRO = New-Object Autodesk.Connectivity.WebServicesTools.WebServiceManager($credRO)
-
-$mUser = $credRW.UserName
-
-$mFiles = $vault.DocumentService.GetFilesByMasterId(130826)
-$mLatestFile = $vault.DocumentService.GetLatestFileByMasterId(130826)
-
-$PropDefs = $vault.PropertyService.GetPropertyDefinitionsByEntityClassId("FILE")
-
-$propDefIds = @()
-	$PropDefs | ForEach-Object {
-		$propDefIds += $_.Id
-	} 
-	$mPropDef = $propDefs | Where-Object { $_.DispName -eq "Entstanden aus"}
-	
-	$mEntIDs = @()
-	$mEntIDs += $mLatestFile.Id
-	$mPropDefIDs = @()
-	$mPropDefIDs += $mPropDef.Id
-	$mProp = $vault.PropertyService.GetProperties("FILE",$mEntIDs, $mPropDefIDs)
-
-	$mVal = $mProp[0].Val
-
-	next
-	
+[System.Reflection.Assembly]::LoadFrom('C:\Program Files (x86)\Autodesk\Autodesk Vault 2019 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll')
+$serverID = New-Object Autodesk.Connectivity.WebServices.ServerIdentities
+$serverID.DataServer = "ServerName OrI P"
+$serverID.FileServer = "ServerName Or IP"
+$VaultName = "Vault Name"
+$UserName = "Administrator"
+$password = ""
+#new in 2019 API: licensing agent enum "Client" "Server" or "None" (=readonly access). 2017 and 2018 required local client installed and licensed
+$licenseAgent = [Autodesk.Connectivity.WebServices.LicensingAgent]::Server
+		
+$cred = New-Object Autodesk.Connectivity.WebServicesTools.UserPasswordCredentials($serverID, $VaultName, $UserName, $password, $licenseAgent)
+$vault = New-Object Autodesk.Connectivity.WebServicesTools.WebServiceManager($cred)
