@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43FE4BDE-2C3D-42AA-9AE8-2027FA7D411A}</ProjectGuid>
+    <ProjectGuid>{8539A74F-126A-4DDD-AE3B-551F99D7BD16}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>VDS_2019_ConfigLinks_Quickstart</RootNamespace>
+    <RootNamespace>VDS_2019_ConfigLinks_OTX_Configuration</RootNamespace>
     <AssemblyName>VDS-2019-Template</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -122,6 +122,9 @@
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.Default.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.Default.ps1</Link>
     </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.DerivationTree.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.QS.DerivationTree.ps1</Link>
+    </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Adsk.QS.EcoUpdate.ps1">
       <Link>Vault.Custom\addinVault\Adsk.QS.EcoUpdate.ps1</Link>
     </None>
@@ -151,6 +154,18 @@
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.EditFolder.ps1">
       <Link>Vault.Custom\addinVault\Menus\ADSK.QS.EditFolder.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.GoToInvSibling.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.GoToInvSibling.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.GoToReplacedBy.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.GoToReplacedBy.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.GoToSelectedFile.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.GoToSelectedFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.GoToSourceFile.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.GoToSourceFile.ps1</Link>
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1">
       <Link>Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1</Link>
@@ -196,6 +211,9 @@
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\Menus\ShowLog.ps1">
       <Link>Vault\addinVault\Menus\ShowLog.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\CustomEntityDefinitions.json">
+      <Link>Vault\CustomEntityDefinitions.json</Link>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -1383,6 +1401,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.InvSiblings.xaml">
+      <Link>Vault.Custom\Configuration\ADSK.QS.InvSiblings.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ADSK.QS.ReserveNumbers.xaml">
       <Link>Vault.Custom\Configuration\ADSK.QS.ReserveNumbers.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -1393,8 +1416,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ECO\ADSK.QS.EcoUpdate.xaml">
+      <Link>Vault.Custom\Configuration\ECO\ADSK.QS.EcoUpdate.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\ADSK.QS.CAD BOM.xaml">
       <Link>Vault.Custom\Configuration\File\ADSK.QS.CAD BOM.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\File\ADSK.QS.DerivationTree.xaml">
+      <Link>Vault.Custom\Configuration\File\ADSK.QS.DerivationTree.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
