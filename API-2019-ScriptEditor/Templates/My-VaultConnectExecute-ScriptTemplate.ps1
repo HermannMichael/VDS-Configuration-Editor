@@ -13,10 +13,10 @@
 #region ConnectToVault
 		[System.Reflection.Assembly]::LoadFrom('C:\Program Files (x86)\Autodesk\Autodesk Vault 2019 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll')
 		$serverID = New-Object Autodesk.Connectivity.WebServices.ServerIdentities
-			$serverID.DataServer = ""
-			$serverID.FileServer = ""
-		$VaultName = ""
-		$UserName = ""
+			$serverID.DataServer = "WIN-99HIBFVG5L3"
+			$serverID.FileServer = "WIN-99HIBFVG5L3"
+		$VaultName = "OTX-2019-ConfigSamples"
+		$UserName = "CAD Admin"
 		$password = ""
 		#new in 2019 API: licensing agent enum "Client" "Server" or "None" (=readonly access). 2017 and 2018 required local client installed and licensed
 		$licenseAgent = [Autodesk.Connectivity.WebServices.LicensingAgent]::Server
@@ -26,7 +26,7 @@
 
 		#region ExecuteInVault
 		
-			#query data, create folder(s)...
+			
 			
 
 		#endregion ExecuteInVault

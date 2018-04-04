@@ -28,12 +28,12 @@
   <ItemGroup>
     <Compile Include="Tools\Adsk.CreatePwFile.ps1" />
     <Compile Include="Tools\ADSK.Vault.powerShell.Tools.psm1" />
-    <Compile Include="Templates\MyScriptTemplate.ps1" />
+    <Compile Include="Templates\ScriptFrameTemplate.ps1" />
     <Compile Include="Templates\My-VaultConnectExecute-ScriptTemplate.ps1" />
     <Compile Include="Tools\Adsk.VaultActivateScheduledJobForQueue.ps1" />
     <Compile Include="Tools\Adsk.VaultAddJobToQueue.ps1" />
     <Compile Include="Vault-API-2019-Sample-QueryGroupMembership.ps1" />
-    <Compile Include="Vault-API-2019-Sample-CreateFolder.ps1" />
+    <Compile Include="Vault-API-2019-Sample-Search-Entities.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tools\" />
