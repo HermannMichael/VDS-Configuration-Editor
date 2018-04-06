@@ -12,9 +12,9 @@
 
 #region project settings
 	# -------------- set the location of your powershell project accordingly -------------
-	$MySolutionPath = 'C:\Users\marku\Documents\Visual Studio 2017\Projects\SD124422' 
+	$MySolutionPath = 'C:\Users\koechlm\source\repos\VDS-Configuration-Editor' 
 	# -------------- set the Vault Edition/Version Name used -------------
-	$VaultVersion = 'Vault Professional 2018'
+	$VaultVersion = 'Vault Professional 2019'
 #endregion project settings
 
 #region ConnectToVault
@@ -24,11 +24,13 @@
 		$serverID = New-Object Autodesk.Connectivity.WebServices.ServerIdentities
 			$serverID.DataServer = "192.168.85.139"
 			$serverID.FileServer = "192.168.85.139"
-		$VaultName = "SD124422"
+		$VaultName = "SD124422-AU2017"
 		$UserName = "Administrator"
-		$password = "MyPW"
-
-		$cred = New-Object Autodesk.Connectivity.WebServicesTools.UserPasswordCredentials($serverID, $VaultName, $UserName, $password)
+		$password = ""
+		#new in 2019 API: licensing agent enum "Client" "Server" or "None" (=readonly access). 2017 and 2018 required local client installed and licensed
+		$licenseAgent = [Autodesk.Connectivity.WebServices.LicensingAgent]::Server
+		
+		$cred = New-Object Autodesk.Connectivity.WebServicesTools.UserPasswordCredentials($serverID, $VaultName, $UserName, $password, $licenseAgent)
 		$vault = New-Object Autodesk.Connectivity.WebServicesTools.WebServiceManager($cred)
 
 		#region ExecuteInVault
@@ -39,7 +41,7 @@
 				[System.Enum]$AuthFlag = [Autodesk.DataManagement.Client.Framework.Vault.Currency.Connections.AuthenticationFlags]::Standard
 				$UsrID = $vault.AuthService.CurrentlySetSecurityHeader.UserId				
 				$vaultConnection = New-Object Autodesk.DataManagement.Client.Framework.Vault.Currency.Connections.Connection($vault, $VaultName, $UsrID, $serverID, $AuthFlag )
-				$vaultConnection.WebServiceManager.JobService.AddJob("Autodesk.SD124422_Job_Basic1", "AU 2017 Class SD124422 Sample-Job", $params, 1)
+				$vaultConnection.WebServiceManager.JobService.AddJob("Autodesk.API-Sample-02", "Sample-02-Job-DebugMode", $params, 1)
 				echo "Job successfully added to Queue"
 			}
 			Catch

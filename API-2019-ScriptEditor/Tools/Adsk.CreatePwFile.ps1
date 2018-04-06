@@ -10,7 +10,7 @@
 	#===============================================================================#
 #endregion
 
-$MySolutionPath = 'C:\Users\marku\Documents\Visual Studio 2017\Projects\SD124422'
+$MySolutionPath = 'C:\Users\koechlm\source\repos\VDS-Configuration-Editor'
 
 Import-Module ($MySolutionPath + '\SD124422-Sample-01\Tools\ADSK.Vault.powerShell.Tools.psm1')
 

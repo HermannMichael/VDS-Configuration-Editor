@@ -12,7 +12,7 @@
 
 #region project settings
 	# -------------- set the location of your powershell project accordingly -------------
-	$MySolutionPath = 'C:\Users\marku\Documents\Visual Studio 2017\Projects\SD124422' 
+	$MySolutionPath = 'C:\Users\koechlm\source\repos\VDS-Configuration-Editor' 
 	# -------------- set the Vault Edition/Version Name used -------------
 	$VaultVersion = 'Vault Professional 2019'
 #endregion project settings
