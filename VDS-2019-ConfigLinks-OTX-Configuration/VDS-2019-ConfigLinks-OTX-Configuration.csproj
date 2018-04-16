@@ -234,12 +234,6 @@
     <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\InventorDynamicProperties.xml">
       <Link>CAD.Custom\Configuration\InventorDynamicProperties.xml</Link>
     </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\de-DE\PropertyTranslations.xml">
-      <Link>de-DE\PropertyTranslations.xml</Link>
-    </Resource>
-    <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\de-DE\UIStrings.xml">
-      <Link>de-DE\UIStrings.xml</Link>
-    </Resource>
     <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\en-US\PropertyTranslations.xml">
       <Link>en-US\PropertyTranslations.xml</Link>
     </Resource>
