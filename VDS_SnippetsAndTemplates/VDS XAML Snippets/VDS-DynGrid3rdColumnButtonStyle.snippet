@@ -2,9 +2,9 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>DynGridButton_3rdCol</Title>
+			<Title>DynGridButton 3rd Column Style</Title>
 			<Shortcut />
-			<Description>DataTrigger for button definition 3rd column</Description>
+			<Description>Style for 3rd Column in DynPropGrids; add DataTrigger for each property that gets a button</Description>
 			<Author />
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
@@ -14,7 +14,12 @@
 		<Snippet>
 			<Code Language="XAML" Delimiter="~">
         <![CDATA[
-<DataTrigger Binding="{Binding Name}" Value="MyPropName">
+<Style x:Key="DynamicDataGridBtnCellStyle" TargetType="{x:Type DataGridCell}">
+            <Setter Property="KeyboardNavigation.IsTabStop" Value="False" />
+            <Setter Property="IsHitTestVisible" Value="False" />
+            <Setter Property="Width" Value="0"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Name}" Value="MyPropName">
                     <Setter Property="IsHitTestVisible" Value="True" />
                     <Setter Property="Width" Value="Auto"/>
                     <Setter Property="Template">
@@ -28,6 +33,8 @@
                         </Setter.Value>
                     </Setter>
                 </DataTrigger>
+            </Style.Triggers>
+        </Style>
       ]]></Code>
 		</Snippet>
 	</CodeSnippet>
