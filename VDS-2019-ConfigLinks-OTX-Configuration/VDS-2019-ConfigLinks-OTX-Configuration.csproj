@@ -86,6 +86,9 @@
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\addins\ADSK.QS.Default.ps1">
       <Link>CAD.Custom\addins\ADSK.QS.Default.ps1</Link>
     </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\addins\Adsk.QS.FileNameValidation.ps1">
+      <Link>CAD.Custom\addins\Adsk.QS.FileNameValidation.ps1</Link>
+    </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCAD.cfg">
       <Link>CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCAD.cfg</Link>
     </None>
