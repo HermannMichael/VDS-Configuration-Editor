@@ -129,11 +129,14 @@
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.DerivationTree.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.DerivationTree.ps1</Link>
     </None>
-    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Adsk.QS.EcoUpdate.ps1">
-      <Link>Vault.Custom\addinVault\Adsk.QS.EcoUpdate.ps1</Link>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Adsk.QS.EcoEdit.ps1">
+      <Link>Vault.Custom\addinVault\Adsk.QS.EcoEdit.ps1</Link>
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.FileBOM.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.FileBOM.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.ItemEdit.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.QS.ItemEdit.ps1</Link>
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1</Link>
@@ -170,6 +173,9 @@
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.GoToSourceFile.ps1">
       <Link>Vault.Custom\addinVault\Menus\ADSK.QS.GoToSourceFile.ps1</Link>
+    </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.InvInsertCopy.ps1">
+      <Link>Vault.Custom\addinVault\Menus\ADSK.QS.InvInsertCopy.ps1</Link>
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1">
       <Link>Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1</Link>
@@ -1414,8 +1420,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ECO\ADSK.QS.EcoUpdate.xaml">
-      <Link>Vault.Custom\Configuration\ECO\ADSK.QS.EcoUpdate.xaml</Link>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\ECO\ADSK.QS.EcoEdit.xaml">
+      <Link>Vault.Custom\Configuration\ECO\ADSK.QS.EcoEdit.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -1436,6 +1442,11 @@
     </Page>
     <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Folder\ADSK.QS.FolderDataSheet.xaml">
       <Link>Vault.Custom\Configuration\Folder\ADSK.QS.FolderDataSheet.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\ADSK.QS.ItemEdit.xaml">
+      <Link>Vault.Custom\Configuration\Item\ADSK.QS.ItemEdit.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

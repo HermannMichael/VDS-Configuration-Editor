@@ -11,8 +11,12 @@
 #endregion
 
 #region - version history
+# Version Infor - VDS Quickstart Extension 2019.1.0
+	# new function mSearchCustentOfCat([String]$mCatDispName)
+	# new function mSearchItemOfCat([String]$mCatDispName)
+
 # Version Info - VDS Quickstart Extension 2019.0.0
-# new function ADSK.GroupMemberOf() 
+	# new function ADSK.GroupMemberOf()
 
 #endregion
 
@@ -254,4 +258,38 @@ function Adsk.GroupMemberOf([STRING]$mGroupName)
 		}
 	}
 	return $false
+}
+
+function mSearchCustentOfCat([String]$mCatDispName)
+{
+	$mSearchString = $mCatDispName
+	$srchCond = New-Object autodesk.Connectivity.WebServices.SrchCond
+	$propDefs = $vault.PropertyService.GetPropertyDefinitionsByEntityClassId("CUSTENT")
+	$propDef = $propDefs | Where-Object { $_.DispName -eq "Category Name" }
+	$srchCond.PropDefId = $propDef.Id
+	$srchCond.SrchOper = 3 
+	$srchCond.SrchTxt = $mSearchString
+	$srchCond.PropTyp = [Autodesk.Connectivity.WebServices.PropertySearchType]::SingleProperty
+	$srchCond.SrchRule = [Autodesk.Connectivity.WebServices.SearchRuleType]::Must
+	$srchSort = New-Object autodesk.Connectivity.WebServices.SrchSort
+	$searchStatus = New-Object autodesk.Connectivity.WebServices.SrchStatus
+	$bookmark = ""     
+	$mResultAll = New-Object 'System.Collections.Generic.List[Autodesk.Connectivity.WebServices.CustEnt]'
+	
+	while(($searchStatus.TotalHits -eq 0) -or ($mResultAll.Count -lt $searchStatus.TotalHits))
+	{
+		$mResultPage = $vault.CustomEntityService.FindCustomEntitiesBySearchConditions(@($srchCond),@($srchSort),[ref]$bookmark,[ref]$searchStatus)			
+		If ($searchStatus.IndxStatus -ne "IndexingComplete" -or $searchStatus -eq "IndexingContent")
+		{
+			#check the indexing status; you might return a warning that the result bases on an incomplete index, or even return with a stop/error message, that we need to have a complete index first
+		}
+		if($mResultPage.Count -ne 0)
+		{
+			$mResultAll.AddRange($mResultPage)
+		}
+		else { break;}
+
+		return $mResultAll				
+		break; #limit the search result to the first result page; page scrolling not implemented in this snippet release
+	}
 }

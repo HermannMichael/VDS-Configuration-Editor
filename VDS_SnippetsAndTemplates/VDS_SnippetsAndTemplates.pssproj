@@ -41,6 +41,7 @@
     <Compile Include="Script-Samples\CustomObjectBreadCrumb.ps1" />
     <Compile Include="Script-Samples\FileOpenDialog.ps1" />
     <Compile Include="Script-Samples\FolderBreadCrumb.ps1" />
+    <Compile Include="Script-Samples\GetIEntityFromWebServiceEntity.ps1" />
     <Compile Include="Script-Samples\GetUserGroupMembership_2019-newer.ps1" />
     <Compile Include="Script-Samples\GetUserGroupMembership_2014-2018.ps1" />
     <Compile Include="Script-Samples\GoToReplacedBy.ps1" />

@@ -16,7 +16,7 @@
 			$serverID.DataServer = "WIN-99HIBFVG5L3"
 			$serverID.FileServer = "WIN-99HIBFVG5L3"
 		$VaultName = "OTX-2019-ConfigSamples"
-		$UserName = "Mike Manager"
+		$UserName = "Administrator"
 		$password = ""
 		#new in 2019 API: licensing agent enum "Client" "Server" or "None" (=readonly access). 2017 and 2018 required local client installed and licensed
 		$licenseAgent = [Autodesk.Connectivity.WebServices.LicensingAgent]::Server
@@ -25,33 +25,29 @@
 		$vault = New-Object Autodesk.Connectivity.WebServicesTools.WebServiceManager($cred)
 
 		#region ExecuteInVault
-		
+
 		#build the search conditions first
-		$mSearchString = "*"
+		$mSearchString = "Assembly"
 		$srchCond = New-Object autodesk.Connectivity.WebServices.SrchCond
-		$propDefs = $vault.PropertyService.GetPropertyDefinitionsByEntityClassId("FILE")
-		$propDef = $propDefs | Where-Object { $_.SysName -eq "Name" }
+		$propDefs = $vault.PropertyService.GetPropertyDefinitionsByEntityClassId("ITEM")
+		$propDef = $propDefs | Where-Object { $_.DispName -eq "Category Name" }
 		$srchCond.PropDefId = $propDef.Id
 		$srchCond.SrchOper = 3
 		$srchCond.SrchTxt = $mSearchString
 		$srchCond.PropTyp = [Autodesk.Connectivity.WebServices.PropertySearchType]::SingleProperty
 		$srchCond.SrchRule = [Autodesk.Connectivity.WebServices.SearchRuleType]::Must
-
-		#$srchSort = New-Object autodesk.Connectivity.WebServices.SrchSort
-		#$srchSort.PropDefId = ""
-		#$srchSort.SortAsc = $true
-
-		$mSearchStatus = New-Object autodesk.Connectivity.WebServices.SrchStatus
-		$mBookmark = ""     
-		$mResultAll = New-Object 'System.Collections.Generic.List[Autodesk.Connectivity.WebServices.File]'
+		$srchSort = New-Object autodesk.Connectivity.WebServices.SrchSort
+		$searchStatus = New-Object autodesk.Connectivity.WebServices.SrchStatus
+		$bookmark = ""     
+		$mResultAll = New-Object 'System.Collections.Generic.List[Autodesk.Connectivity.WebServices.Item]'
 	
-		while(($mSearchStatus.TotalHits -eq 0) -or ($mResultAll.Count -lt $mSearchStatus.TotalHits))
+		while(($searchStatus.TotalHits -eq 0) -or ($mResultAll.Count -lt $searchStatus.TotalHits))
 		{
-			$mResultPage = $vault.DocumentService.FindFilesBySearchConditions(@($srchCond),@($srchSort),@(($vault.DocumentService.GetFolderRoot()).Id),$true,$true,[ref]$mBookmark,[ref]$mSearchStatus)
-			#check the indexing status; you might return a warning that the result bases on an incomplete index, or even return with a stop/error message, that we need to have a complete index first
-			If ($mSearchStatus.IndxStatus -eq "IndexingComplete" -or $mSearchStatus -eq "IndexingContent")
+			 $mResultPage = $vault.ItemService.FindItemRevisionsBySearchConditions(@($srchCond),@($srchSort),$true,[ref]$bookmark,[ref]$searchStatus)
+			
+			If ($searchStatus.IndxStatus -ne "IndexingComplete" -or $searchStatus -eq "IndexingContent")
 			{
-
+				#check the indexing status; you might return a warning that the result bases on an incomplete index, or even return with a stop/error message, that we need to have a complete index first
 			}
 			if($mResultPage.Count -ne 0)
 			{
@@ -62,8 +58,6 @@
 			break; #limit the search result to the first result page; page scrolling not implemented in this snippet release
 		}
 		
-		
-
 		#endregion ExecuteInVault
 
 		$vault.Dispose() #don't forget to release the connection
