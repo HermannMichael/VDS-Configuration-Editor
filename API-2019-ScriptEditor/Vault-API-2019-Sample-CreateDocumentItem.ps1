@@ -1,13 +1,13 @@
 #region disclaimer
-	#==================================================================
+	#===============================================================================
 	# PowerShell script sample														
 	# Author: Markus Koechl															
 	# Copyright (c) Autodesk 2017													
 	#																				
 	# THIS SCRIPT/CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER     
-	# EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES  
+	# EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES   
 	# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.    
-	#==================================================================
+	#===============================================================================
 #endregion
 
 #region ConnectToVault
@@ -25,9 +25,21 @@
 		$vault = New-Object Autodesk.Connectivity.WebServicesTools.WebServiceManager($cred)
 
 		#region ExecuteInVault
-		
-			
-			
+		# Referenc to Document Service
+
+			#Reference Item Service
+			$ItemSvc = $vault.ItemService
+
+			#Get target item category Id
+			$mEntityCategories = $vault.CategoryService.GetCategoriesByEntityClassId("ITEM", $true)
+			$mEntCatId = ($mEntityCategories | Where-Object {$_.Name -eq "Document" }).ID
+
+			#Create new item and commit
+			[Autodesk.Connectivity.WebServices.Item]$NewItem = $ItemSvc.AddItemRevision($mEntCatId)
+			$NewItem.Title = "My Document Item"
+			$NewItem.Detail = "Long Description of my doc item"
+			$NewItem.Comm = "PS script initiated item"
+			$NewItemRev = $ItemSvc.UpdateAndCommitItems($NewItem)
 
 		#endregion ExecuteInVault
 

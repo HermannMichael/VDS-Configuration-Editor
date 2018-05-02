@@ -120,6 +120,9 @@
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\debug.log">
       <Link>HelpFiles\debug.log</Link>
     </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.Org.Pers.Link.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.Org.Pers.Link.ps1</Link>
+    </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.ActivateSchedTaskAsJob.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.ActivateSchedTaskAsJob.ps1</Link>
     </None>

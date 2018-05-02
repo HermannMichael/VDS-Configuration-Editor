@@ -1,13 +1,13 @@
 #region disclaimer
-	#==================================================================
-	# PowerShell script sample														
+	#===================================================================
+	# PowerShell script sample													
 	# Author: Markus Koechl															
 	# Copyright (c) Autodesk 2017													
 	#																				
 	# THIS SCRIPT/CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER     
-	# EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES  
+	# EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES   
 	# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.    
-	#==================================================================
+	#===================================================================
 #endregion
 
 #region ConnectToVault
@@ -25,10 +25,16 @@
 		$vault = New-Object Autodesk.Connectivity.WebServicesTools.WebServiceManager($cred)
 
 		#region ExecuteInVault
-		
+			#sample to purge lfc controlled file:
+			$mCadFiles = $vault.DocumentService.FindLatestFilesByPaths(@("$/Designs/FileToPurge.ipt"))
+			$mCadFile = $mCadFiles[0]
+			$mPurgeResult = $vault.DocumentService.DeleteFileVersionsByMasterIds(@($mCadFile.MasterId), $false, $null, $null, $null)			
 			
+			#sample to purge un-controlled file
+			$mBaseFiles = $vault.DocumentService.FindLatestFilesByPaths(@("$/Designs/FileToPurge.txt"))
+			$mBaseFile = $mBaseFiles[0]
+			$mPurgeResult = $vault.DocumentService.DeleteFileVersionsByMasterIds(@($mBaseFile.MasterId), $true, 1, 1, "exclude comment")
 			
-
 		#endregion ExecuteInVault
 
 		$vault.Dispose() #don't forget to release the connection

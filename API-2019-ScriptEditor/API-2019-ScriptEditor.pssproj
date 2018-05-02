@@ -27,6 +27,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="My-VaultConnectExecute-Script.ps1" />
+    <Compile Include="Vault-API-2019-Sample-AssignDocumentToItem.ps1" />
+    <Compile Include="Vault-API-2019-Sample-CreateDocumentItem.ps1" />
+    <Compile Include="Vault-API-2019-Sample-PurgeFileVersions.ps1" />
     <Compile Include="Tools\Adsk.CreatePwFile.ps1" />
     <Compile Include="Tools\ADSK.Vault.powerShell.Tools.psm1" />
     <Compile Include="Templates\ScriptFrameTemplate.ps1" />
