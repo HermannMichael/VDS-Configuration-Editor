@@ -34,6 +34,7 @@
     <Folder Include="VDS XAML Snippets\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Script-Libraries\ADSK.QS.CAD.Library.ps1" />
     <Compile Include="Script-Samples\Capture-Restore-CmbSelection.ps1" />
     <Compile Include="Script-Samples\CopyProjectFolderTitleToCADFile.ps1" />
     <Compile Include="Script-Samples\CopyProjectFolderTitleToVaultFile.ps1" />
@@ -49,7 +50,7 @@
     <Compile Include="Script-Samples\myOnPostCloseDialog.ps1" />
     <Compile Include="Script-Samples\NumberschemePropInput_OnPostClose.ps1" />
     <Compile Include="Script-Samples\PowerShell-Debug.ps1" />
-    <Compile Include="Script-Libraries\QuickstartExtension.ps1" />
+    <Compile Include="Script-Libraries\ADSK.QS.VLT.Library.ps1" />
     <Compile Include="Script-Samples\SaveAsDialog.ps1" />
     <Compile Include="Script-Samples\Unblock_QuickstartScripts.ps1" />
     <Compile Include="Script-Samples\VaultConnection.ps1" />

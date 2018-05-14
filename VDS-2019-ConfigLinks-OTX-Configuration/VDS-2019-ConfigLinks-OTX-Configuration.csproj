@@ -144,6 +144,9 @@
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1">
       <Link>Vault.Custom\addinVault\ADSK.QS.ReserveFileNumber.ps1</Link>
     </None>
+    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\ADSK.QS.VLT.Library.ps1">
+      <Link>Vault.Custom\addinVault\ADSK.QS.VLT.Library.ps1</Link>
+    </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.ActivateSchedTask.ps1">
       <Link>Vault.Custom\addinVault\Menus\ADSK.QS.ActivateSchedTask.ps1</Link>
     </None>
@@ -182,9 +185,6 @@
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1">
       <Link>Vault.Custom\addinVault\Menus\ADSK.QS.ReserveNumbers.ps1</Link>
-    </None>
-    <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\QuickstartExtension.ps1">
-      <Link>Vault.Custom\addinVault\QuickstartExtension.ps1</Link>
     </None>
     <None Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\addinVault\AssociatedFiles.ps1">
       <Link>Vault\addinVault\AssociatedFiles.ps1</Link>
