@@ -27,6 +27,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="My-VaultConnectExecute-Script.ps1" />
+    <Compile Include="Vault-API-2019-Sample-AddJobExtractItemData.ps1" />
+    <Compile Include="Tools\Adsk.VaultReviewJobQueue-InvestigateParamArray.ps1" />
     <Compile Include="Vault-API-2019-Sample-AssignDocumentToItem.ps1" />
     <Compile Include="Vault-API-2019-Sample-CreateDocumentItem.ps1" />
     <Compile Include="Vault-API-2019-Sample-PurgeFileVersions.ps1" />
