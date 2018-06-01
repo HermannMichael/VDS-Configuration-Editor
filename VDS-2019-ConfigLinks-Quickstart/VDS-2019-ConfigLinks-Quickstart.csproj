@@ -33,6 +33,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autodesk.Connectivity.WebServices">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2019 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll</HintPath>
@@ -43,9 +63,8 @@
     <Reference Include="CreateObject">
       <HintPath>..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CreateObject.dll</HintPath>
     </Reference>
-    <Reference Include="dataStandard.UI, Version=24.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\VDS-2019-ConfigLinks\dataStandard.UI.dll</HintPath>
+    <Reference Include="dataStandard.UI">
+      <HintPath>..\..\..\..\..\..\ProgramData\Autodesk\Inventor 2019\Addins\Data Standard\dataStandard.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -1275,7 +1294,6 @@
     <Resource Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\NewStandardFolder.ico">
       <Link>Vault\NewStandardFolder.ico</Link>
     </Resource>
-    <Content Include="dataStandard.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="..\..\..\..\..\..\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CAD.Custom\Configuration\AutoCAD-Mechanical\AutoCAD.xaml">
