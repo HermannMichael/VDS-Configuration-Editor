@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDS-2019-ConfigLinks-OTX-Co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Documentation", "_Documentation", "{D3C6BFED-D830-4DBD-A773-B34FCECC55D1}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\OneDrive - autodesk\OTX 2018\Vault Data Standard - Advanced\Autodesk Vault Data Standard - VDS-ConfigurationEditor.pptx = ..\..\..\OneDrive - autodesk\OTX 2018\Vault Data Standard - Advanced\Autodesk Vault Data Standard - VDS-ConfigurationEditor.pptx
+		Autodesk Vault Data Standard - VDS-ConfigurationEditor.pptx = Autodesk Vault Data Standard - VDS-ConfigurationEditor.pptx
 	EndProjectSection
 EndProject
 Global
