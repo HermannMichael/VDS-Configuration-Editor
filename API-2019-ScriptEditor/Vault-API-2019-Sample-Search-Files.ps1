@@ -15,8 +15,8 @@
 		$serverID = New-Object Autodesk.Connectivity.WebServices.ServerIdentities
 			$serverID.DataServer = "WIN-99HIBFVG5L3"
 			$serverID.FileServer = "WIN-99HIBFVG5L3"
-		$VaultName = "OTX-2019-ConfigSamples"
-		$UserName = "Mike Manager"
+		$VaultName = "INV-Samples"
+		$UserName = "CAD Admin"
 		$password = ""
 		#new in 2019 API: licensing agent enum "Client" "Server" or "None" (=readonly access). 2017 and 2018 required local client installed and licensed
 		$licenseAgent = [Autodesk.Connectivity.WebServices.LicensingAgent]::Server
@@ -38,6 +38,8 @@
 		$srchCond.SrchRule = [Autodesk.Connectivity.WebServices.SearchRuleType]::Must
 
 		$mSearchStatus = New-Object autodesk.Connectivity.WebServices.SrchStatus
+		$srchSort = New-Object Autodesk.Connectivity.WebServices.SrchSort
+		#$srchSort
 		$mBookmark = ""     
 		$mResultAll = New-Object 'System.Collections.Generic.List[Autodesk.Connectivity.WebServices.File]'
 	
